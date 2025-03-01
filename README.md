@@ -2,8 +2,6 @@
 
 A comprehensive educational React project demonstrating essential frontend concepts: component structure, responsive design with flexbox, and data manipulation using JavaScript array methods.
 
-![React TypeScript Shop App Screenshot](https://via.placeholder.com/800x400?text=React+TypeScript+Shop+App)
-
 ## 🚀 Features
 
 - **Navigation Bar**: Responsive header with logo and navigation links
