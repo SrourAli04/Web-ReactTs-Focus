@@ -1,7 +1,7 @@
 import React,{ useState } from 'react'
-import Navbar from '../components/Navbar/Navbar'
-import Footer from '../components/Footer/Footer'
-import ProductList from '../components/ProductList/ProductList'
+import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
+import ProductList from './components/ProductList/ProductList'
 import './App.css'
 
 
@@ -16,7 +16,7 @@ type Product = {
 
 function App() {
 
-  const [products, setProducts] = useState<Product[]>([
+  const products:Product[] = [
     { id: 1, name: 'Laptop', category: 'Electronics', price: 999.99, inStock: true,imageUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVqxEX0rrZQcU3jMY8ZJFxx71mgRR8lh3mvg&s" },
     { id: 2, name: 'Headphones', category: 'Electronics', price: 149.99, inStock: true,imageUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVqxEX0rrZQcU3jMY8ZJFxx71mgRR8lh3mvg&s" },
     { id: 3, name: 'Coffee Maker', category: 'Kitchen', price: 89.99, inStock: false,imageUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVqxEX0rrZQcU3jMY8ZJFxx71mgRR8lh3mvg&s" },
@@ -25,7 +25,7 @@ function App() {
     { id: 6, name: 'Smart Watch', category: 'Electronics', price: 199.99, inStock: false,imageUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVqxEX0rrZQcU3jMY8ZJFxx71mgRR8lh3mvg&s" },
     { id: 7, name: 'Yoga Mat', category: 'Fitness', price: 29.99, inStock: true,imageUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVqxEX0rrZQcU3jMY8ZJFxx71mgRR8lh3mvg&s" },
     { id: 8, name: 'Backpack', category: 'Accessories', price: 59.99, inStock: true,imageUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVqxEX0rrZQcU3jMY8ZJFxx71mgRR8lh3mvg&s" },
-  ]);
+  ];
 
   // State for filter and sort functionality
   const [categoryFilter, setCategoryFilter] = useState<string>('');
