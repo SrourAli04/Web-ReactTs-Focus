@@ -1,16 +1,11 @@
 import React from "react";
 import './ProductCard.css';
+import { IProduct } from "../../types/IProduct";
 
-type Product = {
-    id: number;
-    name: string;
-    category: string;
-    price: number;
-    inStock: boolean;
-    imageUrl?: string;
-  };
-
-const ProductCard: React.FC<{product: Product}> = ({product}) => {
+  const handleEvent = (event:React.MouseEvent<HTMLButtonElement>) => {
+    console.log(event,'Button clicked');
+  }
+const ProductCard: React.FC<{product: IProduct}> = ({product}) => {
     return (
         <div className="product-card">
           <div className="product-image">
@@ -26,7 +21,7 @@ const ProductCard: React.FC<{product: Product}> = ({product}) => {
             <p className={`stock-status ${product.inStock ? 'in-stock' : 'out-of-stock'}`}>
               {product.inStock ? 'In Stock' : 'Out of Stock'}
             </p>
-            <button className="add-to-cart-btn" disabled={!product.inStock}>
+            <button className="add-to-cart-btn" disabled={!product.inStock} onClick={handleEvent}>
               {product.inStock ? 'Add to Cart' : 'Sold Out'}
             </button>
           </div>

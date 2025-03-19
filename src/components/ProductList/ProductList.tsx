@@ -1,17 +1,10 @@
 import React from "react";
 import ProductCard from "../ProductCard/ProductCard";
 import './ProductList.css';
-
-type Product = {
-    id: number;
-    name: string;
-    category: string;
-    price: number;
-    inStock: boolean;
-  };
+import { IProduct } from "../../types/IProduct";
 
 const ProductList: React.FC<{
-    products: Product[];
+    products: IProduct[];
     categoryFilter: string;
     sortBy: string;
     showInStockOnly: boolean;
