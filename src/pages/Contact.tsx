@@ -6,7 +6,13 @@ const Contact:React.FC= () => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        
+        console.log('Name:', name);
+        console.log('Email:', email);
+        console.log('Message:', message);
+        alert('Form submitted!');
+        setName('');    
+        setEmail('');
+        setMessage('');
     };
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
